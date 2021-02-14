@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/LinearLayout1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ruleta6"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:id="@+id/ruleta"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/ruleta"
+                android:src="@drawable/pointer"
+                android:layout_centerHorizontal="true"
+
+                android:id="@+id/pointer"/>
+
+            <ImageButton
+                android:layout_height="100dp"
+                android:layout_width="100dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_baseline_refresh_24"
+                android:scaleType="fitCenter"
+                android:background="@drawable/btnclick_corner"
+                android:id="@+id/roll"
+                android:onClick="onClickButtonRoll"
+                android:layout_marginBottom="20dp"
+
+                />
+            <ImageButton
+                android:layout_height="100dp"
+                android:layout_width="100dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_baseline_exposure_neg_1_24"
+                android:scaleType="fitCenter"
+                android:background="@drawable/btnclick_corner"
+                android:layout_toLeftOf="@id/roll"
+                android:layout_marginRight="20dp"
+                android:id="@+id/minus"
+                android:onClick="btttonMinus"
+                android:layout_marginBottom="20dp"
+                />
+            <ImageButton
+                android:layout_height="100dp"
+                android:layout_width="100dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_baseline_exposure_plus_1_24"
+                android:scaleType="fitCenter"
+                android:background="@drawable/btnclick_corner"
+                android:layout_toRightOf="@+id/roll"
+                android:layout_marginLeft="20sp"
+                android:id="@+id/plus"
+                android:onClick="buttonplus"
+                android:layout_marginBottom="20dp"
+                />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to ruleta!"
+            android:layout_above="@id/pointer"
+            android:layout_centerHorizontal="true"
+            android:textSize="40dp"
+            android:layout_marginBottom="40dp"
+            android:textColor="@color/black"
+            android:background="@drawable/btnclick_corner"
+            android:padding="10dp"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
